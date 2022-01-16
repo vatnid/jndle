@@ -1225,7 +1225,7 @@
     }
     var Sa = document.createElement("template");
     Sa.innerHTML =
-      '\n  <style>\n  .setting {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    border-bottom: 1px solid var(--color-tone-4);\n    padding: 16px 0;\n  }\n\n  a, a:visited {\n    color: var(--color-tone-2);\n  }\n\n  .title {\n    font-size: 18px;\n  }\n  .text {\n    padding-right: 8px;\n  }\n  .description {\n    font-size: 12px;\n    color: var(--color-tone-2);\n  }\n\n  #footnote {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    padding: 16px;\n    color: var(--color-tone-2);\n    font-size: 12px;\n    text-align: right;\n    display: flex;\n    justify-content: space-between;\n    align-items: flex-end;\n  }\n\n  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {\n    .setting {\n      padding: 16px;\n    }\n  }\n\n  </style>\n  <div class="sections">\n    <section>\n      <div class="setting">\n        <div class="text">\n          <div class="title">Hard Mode</div>\n          <div class="description">Any revealed hints must be used in subsequent guesses</div>\n        </div>\n        <div class="control">\n          <game-switch id="hard-mode" name="hard-mode"></game-switch>\n        </div>\n      </div>\n      <div class="setting">\n        <div class="text">\n          <div class="title">Dark Theme</div>\n        </div>\n        <div class="control">\n          <game-switch id="dark-theme" name="dark-theme"></game-switch>\n        </div>\n      </div>\n      <div class="setting">\n        <div class="text">\n          <div class="title">Color Blind Mode</div>\n          <div class="description">High contrast colors</div>\n        </div>\n        <div class="control">\n          <game-switch id="color-blind-theme" name="color-blind-theme"></game-switch>\n        </div>\n      </div>\n    </section>\n\n    <section>\n      <div class="setting">\n        <div class="text">\n          <div class="title">Feedback</div>\n        </div>\n        <div class="control">\n          <a href="mailto:me@samuello.io?subject=Feedback">Email</a>\n          |\n          <a href="https://github.com/vatnid/jndle" target="blank" >GitHub</a>\n        </div>\n      </div>\n    </section>\n  </div>\n  <div id="footnote">\n    <div id="copyright">Copyright Josh Wardle 2021-2022. He actually made it! All Rights Reserved.</div>\n    <div>\n      <div id="puzzle-number"></div>\n      <div id="hash"></div>\n    </div>\n  </div>\n';
+      '\n  <style>\n  .setting {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    border-bottom: 1px solid var(--color-tone-4);\n    padding: 16px 0;\n  }\n\n  a, a:visited {\n    color: var(--color-tone-2);\n  }\n\n  .title {\n    font-size: 18px;\n  }\n  .text {\n    padding-right: 8px;\n  }\n  .description {\n    font-size: 12px;\n    color: var(--color-tone-2);\n  }\n\n  #footnote {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    padding: 16px;\n    color: var(--color-tone-2);\n    font-size: 12px;\n    text-align: right;\n    display: flex;\n    justify-content: space-between;\n    align-items: flex-end;\n  }\n\n  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {\n    .setting {\n      padding: 16px;\n    }\n  }\n\n  </style>\n  <div class="sections">\n    <section>\n      <div class="setting">\n        <div class="text">\n          <div class="title">困難模式</div>\n          <div class="description">任何提示都必須要喺下一次估答嘅時候用</div>\n        </div>\n        <div class="control">\n          <game-switch id="hard-mode" name="hard-mode"></game-switch>\n        </div>\n      </div>\n      <div class="setting">\n        <div class="text">\n          <div class="title">黑夜模式</div>\n        </div>\n        <div class="control">\n          <game-switch id="dark-theme" name="dark-theme"></game-switch>\n        </div>\n      </div>\n      <div class="setting">\n        <div class="text">\n          <div class="title">色盲模式</div>\n          <div class="description">高對比度顏色</div>\n        </div>\n        <div class="control">\n          <game-switch id="color-blind-theme" name="color-blind-theme"></game-switch>\n        </div>\n      </div>\n    </section>\n\n    <section>\n      <div class="setting">\n        <div class="text">\n          <div class="title">提出建議</div>\n        </div>\n        <div class="control">\n          <a href="mailto:me@samuello.io?subject=Feedback">Email</a>\n          |\n          <a href="https://github.com/vatnid/jndle" target="blank" >GitHub</a>\n        </div>\n      </div>\n    </section>\n  </div>\n  <div id="footnote">\n    <div id="copyright">Copyright Josh Wardle 2021-2022. He actually made it! All Rights Reserved.</div>\n    <div>\n      <div id="puzzle-number"></div>\n      <div id="hash"></div>\n    </div>\n  </div>\n';
     var _a = (function (e) {
       r(t, e);
       var a = h(t);
@@ -12470,7 +12470,7 @@
                   if (((e = s), !Ta.includes(e) && !La.includes(e)))
                     return (
                       a.setAttribute("invalid", ""),
-                      void this.addToast("Not in word list")
+                      void this.addToast("冇呢個字喎！")
                     );
                   if (this.hardMode) {
                     var t = (function (e, a, s) {
@@ -12493,7 +12493,7 @@
                           if ((r[i] || 0) < o[i])
                             return {
                               validGuess: !1,
-                              errorMessage: "Guess must contain ".concat(
+                              errorMessage: "今次嘅估答一定要有 ".concat(
                                 i.toUpperCase()
                               ),
                             };
@@ -12508,7 +12508,7 @@
                     if (!o)
                       return (
                         a.setAttribute("invalid", ""),
-                        void this.addToast(n || "Not valid in hard mode")
+                        void this.addToast(n || "Hard mode 唔用得")
                       );
                   }
                   var r = (function (e, a) {
@@ -12622,7 +12622,7 @@
                       this.$board
                         .querySelectorAll("game-row")
                         [this.rowIndex].setAttribute("invalid", ""),
-                      void this.addToast("Not enough letters")
+                      void this.addToast("記得打齊五個碼喎！")
                     );
                   this.evaluateRow();
                 }
@@ -12742,7 +12742,7 @@
                         case "hard-mode":
                           return void (n
                             ? e.addToast(
-                                "Hard mode can only be enabled at the start of a round",
+                                "困難模式淨係可以一開頭度開",
                                 1500,
                                 !0
                               )
@@ -12754,7 +12754,7 @@
                     .getElementById("settings-button")
                     .addEventListener("click", function (a) {
                       var s = e.$game.querySelector("game-page"),
-                        t = document.createTextNode("Settings");
+                        t = document.createTextNode("設定");
                       s.appendChild(t);
                       var o = document.createElement("game-settings");
                       o.setAttribute("slot", "content"),
@@ -12766,7 +12766,7 @@
                     .getElementById("help-button")
                     .addEventListener("click", function (a) {
                       var s = e.$game.querySelector("game-page"),
-                        t = document.createTextNode("How to play");
+                        t = document.createTextNode("點樣玩");
                       s.appendChild(t);
                       var o = document.createElement("game-help");
                       o.setAttribute("page", ""),
