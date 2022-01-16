@@ -1,7 +1,4 @@
-a quick and dirty wordle clone in scottish gaelic
+## JNDLE 字道 —— 倉頡版 Wordle
 
-original code and absolutely any and all rights belong to Josh Wardle
+原本嘅設計者同 programmer 係 Josh Wardle。
 
-uses every five letter word from the scottish gaelic duolingo course
-
-14/01/21 - now with support for accents on letters
