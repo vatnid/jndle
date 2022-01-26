@@ -1582,7 +1582,7 @@
 		"一田月一口",
 		"女火弓竹水",
 		"金大弓戈弓",
-		"中戈一女竹",
+		"中戈一女竹", // 2022-01-26
 		"火木戈中水",
 		"口口戈大口",
 		"十十一中月",
@@ -13433,7 +13433,7 @@
                                   }),
                                   (d += "\n"));
                               }),
-                              { text: "".concat(l, "\n\n").concat(d.trimEnd()) }
+                              { text: "".concat(l, "\n\n").concat(d.trimEnd()).concat("\n\nhttps://samuello.io/jndle") }
                             );
                           })({
                             evaluations: e.gameApp.evaluations,
